@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script type="module">
+import {doubleArrayElements, sumArray,SkillsManager, DateCalculator} from './js/main.js';
+
+
+const exampleArray = [1, 2, 3, 4, 5];
+const sum = sumArray(exampleArray);
+console.log('Сума елементів масиву:', sum);
+
+const arrayToDouble = [1,2,3,4,5];
+const doubledArray = doubleArrayElements(arrayToDouble);
+console.log('Подвоєні елементи масиву:', doubledArray);
+
+
+const skillsManager = new SkillsManager();
+console.log(skillsManager.addSkill('JavaScript'));
+console.log(skillsManager.addSkill('CSS'));
+console.log(skillsManager.addSkill('C'));
+console.log(skillsManager.getAllSkills());
+
+const dateCalculator = new DateCalculator('2023-01-01');
+dateCalculator.addDays(5);
+console.log(dateCalculator.getResult());
+
+dateCalculator.subtractDays(3);
+console.log(dateCalculator.getResult());
+
+
+
+</script>
+
+</body>
+</html>
